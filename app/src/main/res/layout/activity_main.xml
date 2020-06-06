@@ -22,11 +22,27 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/tv_pemenang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="PEMENANG"
+        android:textColor="#008577"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_Hori"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gamesuit"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
         android:id="@+id/tv_pemain1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
+        android:gravity="center"
         android:text="Pemain 1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guideline_Hori"
         tools:ignore="MissingConstraints" />
@@ -35,16 +51,16 @@
         android:id="@+id/tv_pemain2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="50dp"
+        android:gravity="center"
         android:text="Pemain 2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/guideline_Hori" />
 
     <ImageView
         android:id="@+id/iv_batu"
         android:layout_width="0dp"
         android:layout_height="96dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="50dp"
         android:src="@drawable/batu"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -66,8 +82,6 @@
         android:id="@+id/iv_gunting"
         android:layout_width="0dp"
         android:layout_height="96dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="50dp"
         android:src="@drawable/gunting"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -98,10 +112,8 @@
 
     <ImageView
         android:id="@+id/iv_kertas"
-        android:layout_width="131dp"
-        android:layout_height="103dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_width="0dp"
+        android:layout_height="96dp"
         android:layout_marginTop="50dp"
         android:src="@drawable/kertas"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -111,7 +123,17 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv_exit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_kertas" />
+
+    <ImageView
+        android:id="@+id/iv_kertas1"
         android:layout_width="0dp"
         android:layout_height="96dp"
         android:layout_marginTop="50dp"
@@ -122,14 +144,13 @@
         app:layout_constraintTop_toBottomOf="@+id/iv_gunting1" />
 
     <ImageView
-        android:layout_width="82dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:src="@drawable/ic_cached"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/iv_kertas1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_Hori"
@@ -150,7 +171,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.66" />
+        app:layout_constraintGuide_begin="271dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
