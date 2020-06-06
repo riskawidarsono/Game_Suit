@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val pemain = Pemain()
+    var pemain = Pemain()
     var pemain1 = ""
     var pemain2 = ""
 
@@ -40,6 +40,12 @@ class MainActivity : AppCompatActivity() {
             pemain2 = pemain.permainan[2]
             tampilPemain()
         }
+        iv_exit.setOnClickListener {
+            finish()
+        }
+        iv_restart.setOnClickListener {
+            reset()
+        }
 
 
     }
@@ -51,5 +57,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun reset() {
+        pemain = Pemain()
+        pemain1 = ""
+        pemain2 = ""
+    }
 
 }
