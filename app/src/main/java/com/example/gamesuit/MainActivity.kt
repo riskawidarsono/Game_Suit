@@ -49,18 +49,18 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+    fun reset() {
+        pemain = Pemain()
+        pemain1 = ""
+        pemain2 = ""
+        tv_pemenang.text = "Mulai Permainan"
+    }
 
     fun tampilPemain() {
         Toast.makeText(this, "Pemain 1 : $pemain1 Pemain 2 : $pemain2", Toast.LENGTH_LONG).show()
         val hasil = pemain.hasil(pemain1, pemain2)
         tv_pemenang.text = hasil
 
-    }
-
-    fun reset() {
-        pemain = Pemain()
-        pemain1 = ""
-        pemain2 = ""
     }
 
 }
