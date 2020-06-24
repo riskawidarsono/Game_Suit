@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_landing.*
+import kotlinx.android.synthetic.main.fragment_landing2.*
+import kotlinx.android.synthetic.main.fragment_landing3.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -46,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         iv_restart.setOnClickListener {
             reset()
         }
+
 
 
     }
