@@ -5,4 +5,7 @@
     <string name="page2">Masukan namamu di bawah</string>
     <string name="page1">Bermain Suit melawan sesama pemain</string>
     <string name="page3">Bermain suit meawan komputer</string>
+    <string name="ervin">Ervin</string>
+    <string name="vs_pemain">vs Pemain</string>
+    <string name="pilih_lawanmu">PILIH LAWANMU</string>
 </resources>

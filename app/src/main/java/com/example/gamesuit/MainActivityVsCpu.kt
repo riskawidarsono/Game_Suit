@@ -3,22 +3,17 @@ package com.example.gamesuit
 import Pemain
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_landing.*
-import kotlinx.android.synthetic.main.fragment_landing2.*
-import kotlinx.android.synthetic.main.fragment_landing3.*
+import kotlinx.android.synthetic.main.activity_main_vs_pemain.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivityVsCpu : AppCompatActivity() {
 
     var pemain = Pemain()
     var pemain1 = ""
-    var pemain2 = ""
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_vs_cpu)
+
         iv_batu.setOnClickListener {
             pemain1 = pemain.permainan[1]
             tampilPemain()
@@ -31,18 +26,6 @@ class MainActivity : AppCompatActivity() {
             pemain1 = pemain.permainan[2]
             tampilPemain()
         }
-        iv_batu1.setOnClickListener {
-            pemain2 = pemain.permainan[1]
-            tampilPemain()
-        }
-        iv_gunting1.setOnClickListener {
-            pemain2 = pemain.permainan[0]
-            tampilPemain()
-        }
-        iv_kertas1.setOnClickListener {
-            pemain2 = pemain.permainan[2]
-            tampilPemain()
-        }
         iv_exit.setOnClickListener {
             finish()
         }
@@ -51,20 +34,18 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
     }
+
     fun reset() {
         pemain = Pemain()
         pemain1 = ""
-        pemain2 = ""
         tv_pemenang.text = "Mulai Permainan"
     }
 
     fun tampilPemain() {
-        Toast.makeText(this, "Pemain 1 : $pemain1 Pemain 2 : $pemain2", Toast.LENGTH_LONG).show()
-        val hasil = pemain.hasil(pemain1, pemain2)
+        Toast.makeText(this, "Pemain 1 : $pemain1 ", Toast.LENGTH_LONG).show()
+        val hasil = pemain.hasilCpu(pemain1)
         tv_pemenang.text = hasil
 
     }
-
 }
