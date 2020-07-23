@@ -27,11 +27,8 @@ class Landing3Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btn_fragmant5.setOnClickListener {
-            val username = et_username.text.toString()
-            val intent = Intent(activity, Menu::class.java)
-            intent.putExtra("username",username)
+            val intent = Intent(activity, LoginActivity::class.java)
             startActivity(intent)
-            activity?.finish()
         }
     }
 

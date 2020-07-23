@@ -20,6 +20,7 @@ class Menu : AppCompatActivity(), View.OnClickListener {
 
         iv_vspemain.setOnClickListener(this)
         iv_vscpu.setOnClickListener(this)
+        iconProfile.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -31,6 +32,10 @@ class Menu : AppCompatActivity(), View.OnClickListener {
             R.id.iv_vscpu -> {
                 val menuVsCpu = Intent(this@Menu, MainActivityVsCpu::class.java)
                 startActivity(menuVsCpu)
+            }
+            R.id.iconProfile -> {
+                val profile = Intent(this@Menu, MemoActivity::class.java)
+                startActivity(profile)
             }
         }
     }

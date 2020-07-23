@@ -15,29 +15,23 @@
             android:id="@+id/fragmen3"
             android:layout_width="wrap_content"
             android:layout_height="303dp"
+            android:layout_marginTop="50dp"
             android:src="@drawable/fragment3" />
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/page2"
             android:layout_gravity="center"
-            android:textSize="20dp"/>
-
-        <EditText
-            android:id="@+id/et_username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginTop="50dp"
+            android:text="Persiapkan dirimu!"
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="3 Page 3"
-            android:layout_marginTop="350dp"
+            android:layout_marginTop="300dp"
             android:layout_gravity="center"/>
 
         <ImageView

@@ -32,8 +32,6 @@ class MainActivityVsCpu : AppCompatActivity() {
         iv_restart.setOnClickListener {
             reset()
         }
-
-
     }
 
     fun reset() {
@@ -46,6 +44,5 @@ class MainActivityVsCpu : AppCompatActivity() {
         Toast.makeText(this, "Pemain 1 : $pemain1 ", Toast.LENGTH_LONG).show()
         val hasil = pemain.hasilCpu(pemain1)
         tv_pemenang.text = hasil
-
     }
 }

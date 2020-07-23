@@ -91,4 +91,16 @@
         app:layout_constraintStart_toEndOf="@+id/tv_user1"
         app:layout_constraintTop_toBottomOf="@+id/iv_vscpu" />
 
+    <ImageView
+        android:id="@+id/iconProfile"
+        android:layout_width="42dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="buttonProfile" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

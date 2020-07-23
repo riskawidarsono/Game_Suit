@@ -38,7 +38,7 @@ class Pemain : IPemain {
     }
 
     fun hasilCpu(player1: String): String {
-        var Cpu = permainan.random()
+        val Cpu = permainan.random()
 
         if (player1.isEmpty() || Cpu.isEmpty()) {
             output = "Silahkan Masukan Pilihan"
